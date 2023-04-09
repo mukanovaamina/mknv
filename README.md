@@ -65,7 +65,6 @@ finding “n!”
         else {
             int factor = (int) (n * findFactorial(n - 1));
             return factor; //return evaluatedfactorial by the formula
-
         }
     }
 
@@ -81,7 +80,6 @@ public static int findFibonacci(int n) {//function find n-th Fibonacci number
         else {
             int fibon = findFibonacci(n - 1) + findFibonacci(n - 2);
             return fibon;//in other case return fibonacci number by formula
-
         }
     }
     
@@ -97,13 +95,59 @@ public static int findPower(int a, int n) {// function find power of a
         return pow;//return power of a using loop
     }
     
+Problem 7.
+You are given a number “n” and an array of “n” elements,
+write the program that returns given array in reverse order
+without using array data structure.
+
+ public static int findReverse(int[] arr, int n) {//function re-ordered array in reverse
+        if (n == 0) {
+           return arr[0];
+    }
+        System.out.print(arr[n - 1] + " ");
+    int revArr=findReverse(arr, n - 1);
+    return revArr;//reurn array from arr[n-1] to arr[0]
+    }
     
+Problem 8.
+You are given a string “s”, write the function for checking
+whether “s” is all consists of digits.
+
+ public static boolean checkIsDigit(String s){//function check given string to havind digit
+        for(int i=0; i<s.length(); i++){
+            if(Character.isDigit(s.charAt(i))){
+                return false;//if loop find digit in the string, return false
+            }
+        }
+        return true;//in other case, return true
+    }
+
+Problem 9.
+You are given numbers“n” and “k”,write the program that
+finds Cnk (binomial coefficient) using formulaCn k=Cn−1 k−1 +Cn−1 k where Cn0=Cnn=1.    
+
+public static int findBinCoeff(int a, int n) {//function find binomial coefficient of the number
+        if (n == 0 || n == a) {
+            return 1;// return 1 if n is equals to 0 or a, because n/n=1
+        } else {
+            int binomial = findBinCoeff(a - 1, n - 1) + findBinCoeff(a - 1, n);
+            return binomial;//find binomial coefficient by the formula
+        }
+
+    }
     
+Problem 10.
+You are given “a” and “b”, write the function for finding
+GCD(a, b) using recursion. (Hint: Euclidean Algorithm)
+
+public static int findGCD(int a, int n){//finction find great common division
+        if (n==0){
+            return a;// return number of a, if n is equals to 0
+        }
+        else{
+            int gcd= findGCD(n, a%n);
+            return gcd;//return gcd by using formula
+        }
+    }
     
-    
-    
-    
-    
-    
-    
-    
+
