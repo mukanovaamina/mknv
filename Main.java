@@ -34,7 +34,7 @@ public class Main {
         int pow = findPower(a, n);
         System.out.println(pow);
 
-        int[] revArr = findReverse(arr, n);
+        int revArr = findReverse(arr, n);
         System.out.println(revArr);
 
 
@@ -84,7 +84,8 @@ public class Main {
         boolean isprime=true;
         if (n < 2)
             System.out.println("Number needs to be more than 1");
-        else if (n == 2)
+        else if (n
+                == 2)
             System.out.println("2 is a Prime number");
         else {
             for (int divisor = 2; divisor <= (n / 2); divisor++) {
@@ -133,13 +134,16 @@ public class Main {
         return pow;
     }
 
-    public static int[] findReverse(int[] arr, int n) {
-        int[] revArr = new int[n];
-        for (int i = 0; i < n; i++) {
-            revArr[i]=arr[n - 1 - i];
-        }
-        return revArr;
+
+    public static int findReverse(int[] arr, int n) {
+        if (n == 0) {
+           return arr[0];
     }
+        System.out.print(arr[n - 1] + " ");
+    int revArr=findReverse(arr, n - 1);
+    return revArr;
+    }
+
 
 
     public static boolean checkIsDigit(String s){
