@@ -21,6 +21,9 @@ public class Main {
         float avr = findAverage(n, arr);
         System.out.println(avr);
 
+        boolean prime = checkPrime(n);
+        System.out.println(prime);
+
 
         int factor = findFactorial(n);
         System.out.println(factor);
@@ -73,6 +76,26 @@ public class Main {
     public static float findAverage(int n, int[] arr) {
         float avr = findSum(Integer.valueOf(n), arr);
         return avr / n;
+    }
+    public static boolean checkPrime(int n) {
+        boolean isprime=true;
+        if (n < 2)
+            System.out.println("Number needs to be more than 1");
+        else if (n == 2)
+            System.out.println("2 is a Prime number");
+        else {
+            for (int divisor = 2; divisor <= (n / 2); divisor++) {
+                if ((n % divisor) == 0) {
+                isprime=false;
+                break;
+            }
+        }
+            if (isprime)
+                System.out.printf("Prime", n);
+            else
+                System.out.printf("Composite", n);
+        }
+        return isprime;
     }
 
 
