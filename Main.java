@@ -30,6 +30,8 @@ public class Main {
         int pow = findPower(a, n);
         System.out.println(pow);
 
+        int[] revArr = findReverse(arr, n);
+        System.out.println(revArr);
 
 
 
@@ -87,6 +89,13 @@ public class Main {
         return pow;
     }
 
+    public static int[] findReverse(int[] arr, int n) {
+        int[] revArr = new int[n];
+        for (int i = 0; i < n; i++) {
+            revArr[i]=arr[n - 1 - i];
+        }
+        return revArr;
+    }
 
 
 }
