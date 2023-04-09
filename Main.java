@@ -6,14 +6,15 @@ public class Main {
     public static void main(String[] args) {
         int n;
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the a: ");
         int a = scanner.nextInt();
-        System.out.print("Enter the  a: ");
+        System.out.print("Enter the n: ");
         n = scanner.nextInt();
-        System.out.print("Enter the  n: ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
+
         int min = findMinFromArr(arr, n);
         System.out.println(min);
 
@@ -33,6 +34,18 @@ public class Main {
         int[] revArr = findReverse(arr, n);
         System.out.println(revArr);
 
+
+        Scanner sca = new Scanner(System.in);
+        System.out.print("\n"+"Enter a string to check is all consists of digits: ");
+        String s = sca.nextLine();
+
+        boolean checkIsDigit=checkIsDigit(s);
+        if (checkIsDigit){
+            System.out.println(("yes"));
+        }
+        else {
+            System.out.println(("no"));
+        }
 
 
     }
@@ -69,6 +82,7 @@ public class Main {
         }
     }
 
+
     public static int findFibonacci(int n) {
         if (n == 1)
             return 1;
@@ -96,6 +110,17 @@ public class Main {
         }
         return revArr;
     }
+
+
+    public static boolean checkIsDigit(String s){
+        for(int i=0; i<s.length(); i++){
+            if(Character.isDigit(s.charAt(i))){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
 }
