@@ -6,8 +6,10 @@ public class Main {
     public static void main(String[] args) {
         int n;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the  n: ");
+        int a = scanner.nextInt();
+        System.out.print("Enter the  a: ");
         n = scanner.nextInt();
+        System.out.print("Enter the  n: ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
@@ -24,6 +26,10 @@ public class Main {
 
         int fibon = findFibonacci(n);
         System.out.println(fibon);
+
+        int pow = findPower(a, n);
+        System.out.println(pow);
+
 
 
 
@@ -72,6 +78,15 @@ public class Main {
 
         }
     }
+
+    public static int findPower(int a, int n) {
+        int pow = 1;
+        for (int i = 0; i < n; i++) {
+            pow *= a;
+        }
+        return pow;
+    }
+
 
 
 }
