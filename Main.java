@@ -16,26 +16,26 @@ public class Main {
         }
 
         int min = findMinFromArr(arr, n);
-        System.out.println(min);
+        System.out.println("The minimum calue is " + min);
 
         float avr = findAverage(n, arr);
-        System.out.println(avr);
+        System.out.println("The average is " + avr);
 
         boolean prime = checkPrime(n);
         System.out.println(prime);
 
 
         int factor = findFactorial(n);
-        System.out.println(factor);
+        System.out.println("The factorial is " + factor);
 
         int fibon = findFibonacci(n);
-        System.out.println(fibon);
+        System.out.println("The Fibonacci number is " + fibon);
 
         int pow = findPower(a, n);
-        System.out.println(pow);
+        System.out.println("The powered number is " + pow);
 
         int revArr = findReverse(arr, n);
-        System.out.println(revArr);
+        System.out.println("The reverse array is " + revArr);
 
 
         Scanner sca = new Scanner(System.in);
@@ -51,10 +51,10 @@ public class Main {
         }
 
         int binomial = findBinCoeff(a, n);
-        System.out.println(binomial);
+        System.out.println("The binomial coeficent is" + binomial);
 
         int gcd=findGCD(a,n);
-        System.out.println(gcd);
+        System.out.println("The GCD is " + gcd);
 
 
 
@@ -137,11 +137,11 @@ public class Main {
 
     public static int findReverse(int[] arr, int n) {
         if (n == 0) {
-           return arr[0];
-    }
+            return arr[0];
+        }
         System.out.print(arr[n - 1] + " ");
-    int revArr=findReverse(arr, n - 1);
-    return revArr;
+        int revArr=findReverse(arr, n - 1);
+        return revArr;
     }
 
 
