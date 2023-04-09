@@ -22,6 +22,10 @@ public class Main {
         int factor = findFactorial(n);
         System.out.println(factor);
 
+        int fibon = findFibonacci(n);
+        System.out.println(fibon);
+
+
 
     }
 
@@ -56,6 +60,19 @@ public class Main {
 
         }
     }
+
+    public static int findFibonacci(int n) {
+        if (n == 1)
+            return 1;
+        if (n == 0)
+            return 0;
+        else {
+            int fibon = findFibonacci(n - 1) + findFibonacci(n - 2);
+            return fibon;
+
+        }
+    }
+
 
 }
 
