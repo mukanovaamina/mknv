@@ -19,6 +19,9 @@ public class Main {
         System.out.println(avr);
 
 
+        int factor = findFactorial(n);
+        System.out.println(factor);
+
 
     }
 
@@ -43,6 +46,16 @@ public class Main {
         return avr / n;
     }
 
+
+    public static int findFactorial(int n) {
+        if (n == 1 || n == 0)
+            return 1;
+        else {
+            int factor = (int) (n * findFactorial(n - 1));
+            return factor;
+
+        }
+    }
 
 }
 
