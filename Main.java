@@ -53,6 +53,9 @@ public class Main {
         int binomial = findBinCoeff(a, n);
         System.out.println(binomial);
 
+        int gcd=findGCD(a,n);
+        System.out.println(gcd);
+
 
 
     }
@@ -159,5 +162,16 @@ public class Main {
 
     }
 
+    public static int findGCD(int a, int n){
+        if (n==0){
+            return a;
+        }
+        else{
+            int gcd= findGCD(n, a%n);
+            return gcd;
+        }
     }
+
+
+}
 
